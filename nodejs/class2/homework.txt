@@ -1,0 +1,8 @@
+Homework,
+
+Using FS and Path open existing directory on your computer e.g C:\Users or any other,
+then use scan dir to get all the dirs and files, and in console print the dirs first by alphabetical order, then print the files after also in alphabetical order.
+
+Bonus:
+
+Using promopt to ask the user for path (dir) to be scanned, once the user enters the path, then scan the dir as previously.
