@@ -1,0 +1,16 @@
+{
+    "name": "test",
+    "version": "0.0.1",
+    "description": "What is this project about",
+    "author": {
+        "email": "author@email.com",
+        "name": "Author Authorovski",
+        "url": "http://authour.com"
+    },
+    "license": "GPL",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "dependencies": {},
+    "devDependencies": {}
+}

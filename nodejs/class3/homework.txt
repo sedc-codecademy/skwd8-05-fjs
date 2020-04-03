@@ -1,0 +1,18 @@
+Homework
+
+Create application that at start: will create empty directory called 'workspace'.
+
+Using readline, offer to the user option to :
+
+1. Create new folder inside the workspace directory, and provide a name for the folder.
+2. Create new file in the folder by specifying the name and file extension.
+3. List the files/folders inside the folder by given path. e.g workspace/dirname1
+
+For the operations such file read/create, folder read/create, create new module, that will have all FS related functions, and trigger those functions by using event emitter from main file.
+
+example.
+
+readline.question('Select option: 1,2,3...', (answer) => {
+	event.emit({option: answer});
+});
+
