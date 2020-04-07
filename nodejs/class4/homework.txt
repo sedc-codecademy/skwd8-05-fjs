@@ -1,0 +1,5 @@
+Using express create web server that will listen on port 3000.
+Create public folder from where you will host static HTML content.
+Create a route for create dir that will listen on query params, example localhost:3000/createdir?dirname=name of dir, which once when called it will create new dir under folder where server is running, and also it will check does folder exist with that name.
+
+Create a route for create file that will also listen on query params, and once when called it will create new file with specified filename and extension, and store it under specified folder.
