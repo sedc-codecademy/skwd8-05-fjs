@@ -1,0 +1,11 @@
+1. Create middleware for server that will log which url has been requested in a file.
+(use req.url)
+
+2. Add session to the server and log how many times one user had accessed the server in the session, and which urls had accessed as array into the session.
+
+3. Send data from FE to server using POST and create POST route on server.
+
+BONUS
+
+4. Install body-parser and include it to the server.
+5. Create modular routes on server using express.
