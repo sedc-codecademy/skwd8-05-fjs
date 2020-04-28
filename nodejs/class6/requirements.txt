@@ -1,0 +1,6 @@
+- Express
+    - Routing
+    - BodyParser
+    - Middlewares
+    
+- Nodemon (npm install -g nodemon)

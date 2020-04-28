@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>TodoList</title>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+
+    </head>
+    <body>
+        <h2>NodeJS ToDo List</h2>
+
+        <form class="todoForm" onsubmit="return false">
+            <div>
+                <label>
+                    Name of task
+                    <input type="text" name="taskName" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Assignee
+                    <input type="text" name="taskAssignee" />
+                </label>
+            </div>
+            <div>
+                <label>
+                    Task Description
+                    <textarea name="taskDescription"></textarea>
+                </label>
+            </div>
+            <div>
+                <input type="button" class="sendFormBtn" name="submitForm" value="Send" />
+            </div>
+        </form>
+
+        <script src="assets/js/call.js"></script>
+        <script src="assets/js/form.js"></script>
+    </body>
+</html>
