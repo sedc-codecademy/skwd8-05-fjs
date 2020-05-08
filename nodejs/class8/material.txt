@@ -1,0 +1,5 @@
+- Session handling
+- Forms for login
+- Modular routes
+- Models / Controlers
+- CRUD / REST
