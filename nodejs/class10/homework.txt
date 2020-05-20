@@ -1,0 +1,5 @@
+Add frontend functionality for listing of products & managing of products.
+
+Add complete (frontend and backend) functionality for Orders, where currently logged in user, should select products and create order form it.
+
+Order management: List & Delete of order
