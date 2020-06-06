@@ -1,0 +1,1 @@
+SELECT ALL members with lastname Smith that had made booking for facility Table Tennis 1 OR Table Tennis 2
