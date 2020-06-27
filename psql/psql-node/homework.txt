@@ -1,0 +1,7 @@
+1. Make a route that will load all the orders with details of customer (JOIN) and return result back
+2. Make a route that will filter orders by amount >, < (bigger/smaller) from user input, and should return
+same format of data as route from task 1.
+
+BONUS:
+3. Display results in table on FE (using HTML, CSS, JS)
+4. Implement form fields that will be used for filtering of the data in the table.
