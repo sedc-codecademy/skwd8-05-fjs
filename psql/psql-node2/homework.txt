@@ -8,4 +8,15 @@
 6. Add possibility to get all orders
 7. Add possibility to get order by id
 
-8. Add possibility to get order details (product items) by order id.
+8. Add possibility to get order details (product items) by order id.'
+
+//02.07
+
+1. Add missing entities for hourlypay, suppliers, orderitem (MVC)
+2. Each of these new entities should have possitibility to get one by id or all of them
+
+3. Create custom entity for suppliers hourly rate
+4. Create custom entity for products suppliers 
+
+5. For all non custom entities create DELETE routes
+

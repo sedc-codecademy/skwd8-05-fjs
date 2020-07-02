@@ -1,4 +1,3 @@
-const ErrorHandlerController = require('./error_handler.controller');
 const ValidationHelper = require('../helper/validation.helper');
 const OrderProductsModel = require('../models/orderproducts.model');
 
