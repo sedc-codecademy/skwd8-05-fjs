@@ -1,4 +1,5 @@
 const ErrorHandlerController = require('./error_handler.controller');
+const ValidationHelper = require('../helper/validation.helper');
 const CustomersModel = require('../models/customers.model');
 
 class CustomersController
@@ -9,16 +10,16 @@ class CustomersController
 
     getCustomerById(id)
     {
-        if( ! id )
-        {
-            return Promise.reject(ErrorHandlerController.parseMissingField("id"));
-        }
-        else if(isNaN(id))
-        {
-            return Promise.reject(ErrorHandlerController.fieldNotCorrectType("id", "integer"))
-        }
+        let validation = ValidationHelper.validateEntityFields(
+            {id}, 
+            [{field: 'id', validations: ['number', 'required']}]
+        );
 
+        if( ! validation.length)
         return this.model.findById(id);
+        else
+        return Promise.reject({status: 412, message: validation});       
+
     }
 }
 
