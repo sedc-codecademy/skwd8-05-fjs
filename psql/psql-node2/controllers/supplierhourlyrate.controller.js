@@ -7,17 +7,17 @@ class SuppliersHourlyRateController
         this.model = new SuppliersProductModel();
     }
 
-    getProductSuppliers(productId)
+    getSupplierRates(supplierId)
     {
         let validation = ValidationHelper.validateEntityFields(
-            {productId},
+            {supplierId},
             [
-                {field: 'productId', validations: ['number', 'required']},
+                {field: 'supplierId', validations: ['number', 'required']},
             ]
         );
 
         if( ! validation.length)
-        return this.model.getResult(productId);
+        return this.model.getResult(supplierId);
         else
         return Promise.reject({status: 412, message: validation});       
  

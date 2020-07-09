@@ -1,4 +1,5 @@
 const ModelHelper = require('./model-helper.model');
+const ErrorHandlerController = require('../controllers/error_handler.controller');
 
 class OrdersModel extends ModelHelper
 {
@@ -25,6 +26,21 @@ class OrdersModel extends ModelHelper
     findAllWhereUserIsNotNull()
     {
         return 10;
+    }
+
+    findAllByUserId(userId)
+    {
+        let query = `SELECT * FROM orders WHERE user_id = ${userId}`;
+
+        return new Promise((resolve, reject) => 
+        {            
+            process.pg.query(query, (err, result) => {
+                if(err)
+                reject(ErrorHandlerController.parseDatabaseError(err));
+                else
+                resolve(result.rows);
+            })
+        }) 
     }
 
 }

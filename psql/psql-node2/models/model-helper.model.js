@@ -36,6 +36,18 @@ class ModelHelper
             })
         }) 
     }
+
+    executeRawQuery(query)
+    {console.log(query)
+        return new Promise((resolve, reject) => {
+            process.pg.query(query, (err, result) => {
+                if(err)
+                reject(ErrorHandlerController.parseDatabaseError(err))
+                else
+                resolve(result.rows)
+            })
+        })
+    }
 }
 
 module.exports = ModelHelper;

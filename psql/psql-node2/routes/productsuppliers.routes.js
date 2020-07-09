@@ -1,5 +1,5 @@
 const productsuppliers = require('express').Router();
-const ProductSuppliesController = require('../controllers/supplierhourlyrate.controller');
+const ProductSuppliesController = require('../controllers/productsuppliers.controller');
 
 let psc = new ProductSuppliesController();
 

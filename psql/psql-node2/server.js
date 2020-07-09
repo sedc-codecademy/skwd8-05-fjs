@@ -1,6 +1,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('./config/session');
+
 const app = express();
+app.set('trust proxy', 1) // trust first proxy
+app.use(session);
+
+//Temporary log
+app.use((req, res, next) => {
+    console.log('SessionID:', req.session.id);
+    next();
+})
 
 //Connect with DB, must be first
 const db = require('./config/pg.js');
