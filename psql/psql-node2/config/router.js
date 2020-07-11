@@ -1,8 +1,10 @@
 //Main router config file
 const router = require('express').Router();
+const roles = require('../config/role');
 
 //Not protected routes
 const login = require('../routes/login.routes');
+const logout = require('../routes/logout.routes');
 
 //Protected routes
 const customer = require('../routes/customers.routes');
@@ -17,7 +19,7 @@ const productsuppliers = require('../routes/productsuppliers.routes');
 const users = require('../routes/users.routes');
 
 //CRUD
-router.use('/customers', customer);
+router.use('/customers', (req, res, next) => {roles(req, res, next, [3])}, customer);
 router.use('/orders', orders);
 router.use('/products', products);
 router.use('/suppliers', suppliers);
@@ -27,6 +29,7 @@ router.use('/orderitems', orderitems);
 
 //BE-FE
 router.use('/login', login);
+router.use('/logout', logout);
 router.use('/users', users);
 router.use('/orderproducts', orderproducts);
 router.use('/supplierrates', supplierrates);

@@ -1,0 +1,15 @@
+body
+{
+    font-size: 18px;
+    font-family: Arial;
+}
+
+#notLoggedIn
+{
+    display: none;
+}
+
+#loggedIn
+{
+    display: none;
+}
