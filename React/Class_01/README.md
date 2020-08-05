@@ -7,5 +7,5 @@
 - From App pass "title" prop to Header to print some text in h1 tag
 - List component should have own state which will have "storeName" (by your choise) and "products" which will be
   array of strings (again by your choise).
-- List's render method should return the name of the store in <h2> tag and a list (<ul) with all products inside (<li>)
-    * Bonus: Use "map" to render all products in <li> tags
+- List's render method should return the name of the store in h2 tag and a list (ul) with all products inside (li)
+    * Bonus: Use "map" to render all products in li tags
