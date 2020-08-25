@@ -1,0 +1,22 @@
+#Add what is missing in the code
+
+const users: Array<Users> = [];
+
+const logPersonDetails = (user:User) => {
+	console.log(`Name: ${user.name}, Age: ${user.age}`)
+}
+
+
+
+#Make function that will accept one argument of type string, and return value of type number, where value
+#will be the lenght of the string
+
+
+
+#Make inheritance of Interfaces were (Human) Body will be the main interface, that will have properties of
+#Head from type Head, Arms from type Arms, Legs from type Legs, each of these types should have property
+#position with value of type string (expected to store values: top, left, right, bottom)
+#make an object that will use this interface as type and fill its values from a function that will return a value
+#of type of the Body interface.
+
+const bodyParts():Body{ return ... }
