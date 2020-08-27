@@ -1,0 +1,11 @@
+## Create a component with a registration form where in the form you will require from user to enter: Firstname, Lastname, Date of Birth, Address, City, Country, Zip Code, Email and Password.
+
+When user click on the register button, display all details from the form on the screen and require from user to confirm that they are correct.
+
+
+
+
+## Create calculator 
+
+
+
