@@ -1,0 +1,13 @@
+
+
+.link.inactive
+{
+	background-color: #909090;
+	color: #FFF;
+}
+
+.link.active
+{
+	background-color: yellow;
+	color: #303030;
+}

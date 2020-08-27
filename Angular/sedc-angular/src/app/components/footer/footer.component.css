@@ -1,0 +1,10 @@
+:host-context(app-root) 
+{
+	background-color: red;
+	display: block;
+}
+
+:host-context(app-header)
+{
+	background-color: green;
+}

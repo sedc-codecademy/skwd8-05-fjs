@@ -1,0 +1,11 @@
+<ul>
+	<li *ngFor="let item of navMenu" class="link" 
+		[ngClass]="{'active': item.title === activeLink, 'inactive': item.title !== activeLink}">
+			<a [href]="item.url" (click)="activeLink = item.title">{{item.title}}</a>
+	</li>
+</ul>
+
+<ng-container *ngFor="let item of navMenu">
+	<app-footer *ngIf="item.title === 'Home'"></app-footer>
+	<app-body *ngIf="item.title !== 'Home'"></app-body>
+</ng-container>
