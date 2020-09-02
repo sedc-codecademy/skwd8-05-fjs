@@ -1,11 +1,17 @@
-<ul>
+<a (click)="changeDisplay()">{{ displayMenu ? 'Hide': 'Show'}}</a>
+<ul appClick [toDisplay]="displayMenu" (outputValue)="logEvent($event)" [ngClass]="{'active': ulState}">
 	<li *ngFor="let item of navMenu" class="link" 
-		[ngClass]="{'active': item.title === activeLink, 'inactive': item.title !== activeLink}">
-			<a [href]="item.url" (click)="activeLink = item.title">{{item.title}}</a>
+		[ngClass]="{'active': item.title === activeLink, 'inactive': item.title !== activeLink, 'isNumber' : tmpVar === 1}">
+			<a [href]="item.url" (click)="activeLink = item.title" appHighligh>{{item.title}}</a>
 	</li>
 </ul>
 
-<ng-container *ngFor="let item of navMenu">
-	<app-footer *ngIf="item.title === 'Home'"></app-footer>
-	<app-body *ngIf="item.title !== 'Home'"></app-body>
-</ng-container>
+{{title}}
+<!-- 
+<div [ngClass]="updateClass(activeLink)" appHighligh>This will update the class from fn</div>
+
+<div [ngSwitch]="activeLink">
+	<div *ngSwitchCase="'Home'">Home page is active</div>
+	<div *ngSwitchCase="'About'">About page is active</div>
+	<div *ngSwitchDefault>Default none of it is active</div>
+</div> -->

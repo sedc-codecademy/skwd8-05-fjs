@@ -1,1 +1,7 @@
-<p>body works!</p>
+<form #f="ngForm" (ngSubmit)="formSubmit(f)">
+	<input type="text" name="firstname" [(ngModel)]="user.firstname" placeholder="Please enter your name" required />
+	<span *ngIf="! user.firstname">Please enter your firstname</span>
+	<input type="text" name="lastname" [(ngModel)]="user.lastname" placeholder="Please enter your lastname" required />
+	<input type="email" name="email" pattern="[a-zA-Z0-9]+" [(ngModel)]="user.email" placeholder="Please enter your email" required />
+	<button type="submit">Save</button>
+</form>

@@ -13,3 +13,8 @@ ul
 	margin:0;
 	background-color: #c9c9c9;
 }
+
+input.ng-invalid
+{
+	border: 1px solid red;
+}

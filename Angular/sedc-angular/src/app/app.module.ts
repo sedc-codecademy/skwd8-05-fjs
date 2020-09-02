@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { HighlighDirective } from './directives/highligh.directive';
+import { ClickDirective } from './directives/click.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     BodyComponent,
-    FooterComponent
+    FooterComponent,
+    HighlighDirective,
+    ClickDirective
   ],
   imports: [
     BrowserModule,
