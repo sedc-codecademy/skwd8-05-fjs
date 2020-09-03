@@ -9,6 +9,9 @@ import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlighDirective } from './directives/highligh.directive';
 import { ClickDirective } from './directives/click.directive';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { CustomPipe } from './pipes/custom.pipe';
+import { ViewChildComponent } from './components/view-child/view-child.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ClickDirective } from './directives/click.directive';
     BodyComponent,
     FooterComponent,
     HighlighDirective,
-    ClickDirective
+    ClickDirective,
+    UserListComponent,
+    CustomPipe,
+    ViewChildComponent
   ],
   imports: [
     BrowserModule,

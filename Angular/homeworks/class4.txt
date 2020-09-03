@@ -1,0 +1,6 @@
+#Create component called Radio button that will render only one radio button, include same component in a parent one using ViewChild, and when
+some of the radio buttons is clicked (in child component) update parent component with the info of which radio button is clicked, while also
+reset (unclick) other radio buttons from other child components
+
+#Each radio button should bring different filter for DatePipe, where once you click on a radio button it will filter the date by following formats:
+"dd-MM-yyyy", "yyyy-MM-dd", "HH:mm",  "HH:mm:ss", "dd-MM-yyyy HH:mm"

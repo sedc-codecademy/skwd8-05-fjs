@@ -41,6 +41,7 @@ class Parent
 class Main extends Parent implements MainMustHave, MainOptionalToHave
 {
 	isStarted:boolean = false;
+
 	constructor(){
 		super('Igor', '32')
 	}

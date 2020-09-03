@@ -1,7 +1,29 @@
-<form #f="ngForm" (ngSubmit)="formSubmit(f)">
-	<input type="text" name="firstname" [(ngModel)]="user.firstname" placeholder="Please enter your name" required />
-	<span *ngIf="! user.firstname">Please enter your firstname</span>
-	<input type="text" name="lastname" [(ngModel)]="user.lastname" placeholder="Please enter your lastname" required />
-	<input type="email" name="email" pattern="[a-zA-Z0-9]+" [(ngModel)]="user.email" placeholder="Please enter your email" required />
+<form #f="ngForm" (ngSubmit)="formSubmit(f)" *ngIf="user">
+	<div>
+		<input type="text" name="firstname" [(ngModel)]="user.firstname" placeholder="Please enter your name"
+			required />
+		<span *ngIf="! user.firstname">Please enter your firstname</span>
+	</div>
+	<div>
+		<input type="text" name="lastname" [(ngModel)]="user.lastname" placeholder="Please enter your lastname"
+			required />
+	</div>
+	<div>
+		<input type="email" name="email" pattern="[a-zA-Z0-9]+" [(ngModel)]="user.email"
+			placeholder="Please enter your email" required />
+	</div>
 	<button type="submit">Save</button>
 </form>
+
+<div>
+	<pre>{{dob}}</pre>
+	<pre>{{dob | date:"dd-MM-yyyy" }}</pre>
+	<pre>{{dob | date:"HH:mm" }}</pre>
+	<pre>{{dob}}</pre>
+</div>
+
+<pre (click)="initViewChild()">ViewChild</pre>
+<div #viewChild></div>
+<div #viewChild2></div>
+<!-- 
+<app-view-child></app-view-child> -->

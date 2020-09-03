@@ -1,0 +1,16 @@
+<div>
+	<input type="text" name="filter" [(ngModel)]="searchKeyword" />
+</div>
+<pre>
+	Looking for {{searchKeyword}}
+</pre>
+<ul>
+	<li *ngFor="let user of users | custom:filterBy:searchKeyword; index as i" (click)="updateUser(i)">
+		<span>{{user.firstname}}</span>
+		<span>{{user.lastname}}</span>
+		<span>{{user.email}}</span>
+	</li>
+</ul>
+<button (click)="updateFilter('firstname')">Firstname</button>
+<button (click)="updateFilter('lastname')">Lastname</button>
+<button (click)="updateFilter('email')">Email</button>
