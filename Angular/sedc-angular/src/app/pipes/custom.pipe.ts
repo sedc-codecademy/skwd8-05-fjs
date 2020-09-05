@@ -9,6 +9,7 @@ export class CustomPipe implements PipeTransform {
     
     let [filterBy, keyword] = args;
     return value.filter(item => item[filterBy].match(keyword));
+    //users.filter(user => user.firstname.match(/john/))
   }
 
 }

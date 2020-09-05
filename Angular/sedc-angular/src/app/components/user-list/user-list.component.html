@@ -4,8 +4,16 @@
 <pre>
 	Looking for {{searchKeyword}}
 </pre>
-<ul>
+<!-- <ul>
 	<li *ngFor="let user of users | custom:filterBy:searchKeyword; index as i" (click)="updateUser(i)">
+		<span>{{user.firstname}}</span>
+		<span>{{user.lastname}}</span>
+		<span>{{user.email}}</span>
+	</li>
+</ul> -->
+
+<ul>
+	<li *ngFor="let user of filteredUsers()" (click)="updateUser(i)">
 		<span>{{user.firstname}}</span>
 		<span>{{user.lastname}}</span>
 		<span>{{user.email}}</span>

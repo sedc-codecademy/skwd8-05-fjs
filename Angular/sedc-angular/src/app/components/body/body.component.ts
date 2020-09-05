@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild, ViewContainerRef, ComponentFactory
 import { NgForm } from '@angular/forms';
 import { iUser } from 'src/app/interfaces/user.interface';
 import { ViewChildComponent } from '../view-child/view-child.component';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-body',
@@ -24,11 +25,18 @@ export class BodyComponent implements OnInit {
   dob = new Date();
 
   constructor(
-    private componentFactoryResolver: ComponentFactoryResolver
+    private componentFactoryResolver: ComponentFactoryResolver,
+    private usersService:UsersService
   ) { }
 
   ngOnInit() {
-    
+    setInterval(() => {
+      this.usersService.addUser({
+        firstname: `User${Math.floor(Math.random() *  10)}`,
+        lastname: `Last ${Math.floor(Math.random() * 100)}`,
+        email: `test@email${Math.ceil(Math.random() * 2)}.com`
+      })
+    }, 3000)
   }
 
   ngAfterViewInit()

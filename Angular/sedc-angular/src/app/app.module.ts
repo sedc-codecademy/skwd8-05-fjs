@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { ClickDirective } from './directives/click.directive';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { CustomPipe } from './pipes/custom.pipe';
 import { ViewChildComponent } from './components/view-child/view-child.component';
+import { SecondUsersListComponent } from './components/second-users-list/second-users-list.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ViewChildComponent } from './components/view-child/view-child.component
     ClickDirective,
     UserListComponent,
     CustomPipe,
-    ViewChildComponent
+    ViewChildComponent,
+    SecondUsersListComponent,
+    PlanetsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

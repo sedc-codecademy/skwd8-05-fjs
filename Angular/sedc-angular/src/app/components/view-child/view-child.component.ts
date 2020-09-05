@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { count } from 'console';
 
 @Component({
   selector: 'app-view-child',

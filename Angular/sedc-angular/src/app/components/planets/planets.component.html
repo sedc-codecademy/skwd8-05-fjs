@@ -1,0 +1,22 @@
+<table>
+	<thead>
+		<tr *ngIf="planetsList.length">
+			<th *ngFor="let heading of getPlanetHeaders()">{{heading}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let planet of planetsList">
+			<td *ngFor="let key of getPlanetHeaders()">
+				<ng-container *ngIf="isADate(key)">{{planet[key] | date:"dd-MM-yyyy HH:mm"}}</ng-container>
+				<ng-container *ngIf="isALink(key)">
+					<!-- <a *ngFor="let url of planet[key]" [href]="url">{{key}}</a> -->
+					<button *ngFor="let url of planet[key]" (click)="loadUrl(url, key)">{{key}}</button>
+				</ng-container>
+				<ng-container *ngIf="!isADate(key) && ! isALink(key)">{{planet[key]}}</ng-container>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<button (click)="loadMorePlanets()" *ngIf="planetResponse" [disabled]="!planetResponse.next">Load more planets</button>
+<!-- https://swapi.dev/documentation -->
