@@ -1,0 +1,12 @@
+<table>
+	<thead>
+		<tr>
+			<th *ngFor="let key of filmKeys()">{{key}}</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr  *ngFor="let film of films">
+			<td *ngFor="let key of filmKeys()">{{film[key]}}</td>
+		</tr>
+	</tbody>
+</table>

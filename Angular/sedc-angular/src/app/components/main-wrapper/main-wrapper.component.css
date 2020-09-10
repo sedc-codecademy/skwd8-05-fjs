@@ -1,0 +1,7 @@
+:host-context(app-main-wrapper)
+{
+	display: block;
+	width: 100%;
+	min-height: calc(400px);
+	max-width: 100%;
+}

@@ -18,11 +18,11 @@ export class HeaderComponent implements OnInit {
   ulState:boolean = false;
 
   navMenu:Array<NavBarItem> = [
-    {title: 'Home', url: '#home'}, 
-    {title: 'About', url: '#about'},
-    {title: 'Contact', url: '#contact'}, 
-    {title: 'Order', url: '#order'}, 
-    {title: 'Products', url: '#products'}
+    {title: 'Home', url: '/'}, 
+    {title: 'Planets', url: 'planets'},
+    {title: 'Films', url: 'films'}, 
+    {title: 'Residents', url: 'residents'}, 
+    {title: 'Users', url: 'users'}
   ];
 
   constructor() { }

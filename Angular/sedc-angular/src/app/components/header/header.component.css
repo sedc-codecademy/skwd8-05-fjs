@@ -1,13 +1,22 @@
-
-
-.link.inactive
+:host-context(app-header)
 {
-	background-color: #909090;
-	color: #FFF;
+	display: block;
+	width: 100%;
+	max-width: 100%;
 }
 
-.link.active
+ul
 {
-	background-color: yellow;
-	color: #303030;
+	display: flex;
+	width: 100%;
+	max-width: 100%;
+	flex-direction: row;
+	background-color:  #c9c9c9;
+}
+
+ul > li
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

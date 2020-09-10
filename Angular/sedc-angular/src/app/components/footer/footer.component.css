@@ -1,10 +1,9 @@
-:host-context(app-root) 
+:host-context(app-footer)
 {
-	background-color: red;
 	display: block;
-}
-
-:host-context(app-header)
-{
-	background-color: green;
+	width: 100%;
+	max-width: 100%;
+	background: #303030;
+	color: white;
+	min-height: 200px;
 }

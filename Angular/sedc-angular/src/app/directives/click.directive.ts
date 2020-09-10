@@ -40,11 +40,11 @@ export class ClickDirective implements DoCheck{
 
   @HostListener('mouseenter') logEnter()
   {
-    this.outputValue.emit({type:eCustomEvents.MOUSEENTER, value: true});
+    //this.outputValue.emit({type:eCustomEvents.MOUSEENTER, value: true});
   }
 
   @HostListener('mouseleave') logLeave()
   {
-    this.outputValue.emit({type:eCustomEvents.MOUSELEAVE, value: true});
+    //this.outputValue.emit({type:eCustomEvents.MOUSELEAVE, value: true});
   }
 }

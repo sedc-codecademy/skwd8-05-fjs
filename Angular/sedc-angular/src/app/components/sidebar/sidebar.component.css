@@ -1,0 +1,24 @@
+:host-context(app-sidebar)
+{
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 200px;
+	height: calc(100% - 240px);
+	background-color: #909090;
+}
+
+.hide-sidebar
+{
+	display: block;
+	width: 100%;
+	max-width: 100%;
+	text-align: right;
+}
+
+.hide-sidebar a
+{
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+}

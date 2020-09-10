@@ -6,35 +6,36 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { BodyComponent } from './components/body/body.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HighlighDirective } from './directives/highligh.directive';
 import { ClickDirective } from './directives/click.directive';
-import { UserListComponent } from './components/user-list/user-list.component';
 import { CustomPipe } from './pipes/custom.pipe';
-import { ViewChildComponent } from './components/view-child/view-child.component';
-import { SecondUsersListComponent } from './components/second-users-list/second-users-list.component';
 import { PlanetsComponent } from './components/planets/planets.component';
+import { MainWrapperComponent } from './components/main-wrapper/main-wrapper.component';
+import { FilmsComponent } from './components/films/films.component';
+import { ResidentsComponent } from './components/residents/residents.component';
+import { SharedModule } from './modules/shared/shared.module';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    BodyComponent,
     FooterComponent,
     HighlighDirective,
     ClickDirective,
-    UserListComponent,
     CustomPipe,
-    ViewChildComponent,
-    SecondUsersListComponent,
-    PlanetsComponent
+    PlanetsComponent,
+    MainWrapperComponent,
+    FilmsComponent,
+    ResidentsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

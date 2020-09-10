@@ -1,0 +1,2 @@
+Create application router that will allow to user to navigate to three sub modules, 
+each module should have at least two components that can be accessed over sub router.

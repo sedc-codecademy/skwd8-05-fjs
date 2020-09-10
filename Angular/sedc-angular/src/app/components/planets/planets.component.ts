@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanetsService } from 'src/app/services/planets.service';
+import { PlanetsService } from 'src/app/modules/shared/services/planets.service';
 import { iPlanet, iPlanetsResponse } from 'src/app/interfaces/planets.interface';
-import { ResidentsService } from 'src/app/services/residents.service';
+import { ResidentsService } from 'src/app/modules/shared/services/residents.service';
 import { take } from 'rxjs/operators';
-import { FilmsService } from 'src/app/services/films.service';
+import { FilmsService } from 'src/app/modules/shared/services/films.service';
 
 @Component({
   selector: 'app-planets',
@@ -22,7 +22,15 @@ export class PlanetsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+
+    if( ! localStorage.getItem('planets') )
     this._loadPlanets();
+    else
+    {
+      console.log('Cached data');
+      this.planetsList = JSON.parse(localStorage.getItem('planets'));
+      this.planetResponse = JSON.parse(localStorage.getItem('planetsResponse'))
+    }
   }
 
   private _loadPlanets(url?:string)
@@ -31,6 +39,8 @@ export class PlanetsComponent implements OnInit {
       this.planetResponse = planets;
       this.planetsList = this.planetsList.concat(planets.results);
 
+      localStorage.setItem('planets', JSON.stringify(this.planetsList));
+      localStorage.setItem('planetsResponse', JSON.stringify(this.planetResponse));
       console.log(this.planetResponse)
     })
   }

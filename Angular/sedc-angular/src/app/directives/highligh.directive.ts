@@ -11,7 +11,7 @@ export class HighlighDirective implements OnInit{
 
   ngOnInit()
   {
-    console.log('Highlight Directive was initialized')
+    //console.log('Highlight Directive was initialized')
   }
 
   // @HostListener('mouseover', ['$event.target']) highlightElement(e)

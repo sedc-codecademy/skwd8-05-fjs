@@ -1,7 +1,6 @@
-<!-- <app-header [title]="title" (headerEvent)="doSomethingWithHeaderEvent($event)"></app-header>
-<app-body [user]="userToChange"></app-body>
-<app-user-list (changeUser)="passUserToForm($event)"></app-user-list>
-<app-second-users-list></app-second-users-list>
-<app-footer></app-footer> -->
-
-<app-planets></app-planets>
+<app-header></app-header>
+<div class="main-workspace">
+	<app-sidebar (hideSidebar)="hideSidebar()" [hidden]="!sidebarVisibile"></app-sidebar>
+	<router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>
