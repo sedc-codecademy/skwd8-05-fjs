@@ -16,6 +16,8 @@ import { FilmsComponent } from './components/films/films.component';
 import { ResidentsComponent } from './components/residents/residents.component';
 import { SharedModule } from './modules/shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,11 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

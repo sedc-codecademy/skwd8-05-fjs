@@ -1,6 +1,13 @@
-<ul class="nav" (outputValue)="logEvent($event)" [ngClass]="{'active': ulState}">
-	<li *ngFor="let item of navMenu" class="link nav-item" 
-		[ngClass]="{'active': item.title === activeLink}">
-			<a [routerLink]="item.url" (click)="activeLink = item.title" class="nav-link">{{item.title}}</a>
-	</li>
-</ul>
+<mat-toolbar color="primary">
+	<button mat-icon-button class="example-icon" (click)="changeDisplay()" aria-label="Example icon-button with menu icon">
+	  <mat-icon>menu</mat-icon>
+	</button>
+	<span>My App</span>
+	<span class="example-spacer"></span>
+	<button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+	  <mat-icon>favorite</mat-icon>
+	</button>
+	<button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+	  <mat-icon>share</mat-icon>
+	</button>
+  </mat-toolbar>

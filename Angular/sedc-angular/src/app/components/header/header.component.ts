@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() title:string = 'This is header title';
   @Output() headerEvent:EventEmitter<any> = new EventEmitter();
-
+  
   activeLink:string;
   tmpVar:number = 1;
   displayMenu:boolean = false;

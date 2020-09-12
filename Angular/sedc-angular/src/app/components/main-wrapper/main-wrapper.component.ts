@@ -1,4 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewEncapsulation, EventEmitter } from '@angular/core';
+
+declare const window:any;
 
 @Component({
   selector: 'app-main-wrapper',
@@ -10,11 +12,14 @@ export class MainWrapperComponent implements OnInit, OnDestroy {
   constructor() { }
 
   ngOnInit() {
+    //window.globalEmitter = new EventEmitter();
   }
 
   ngOnDestroy()
   {
-    
+    // window.globalEmitter.subscribe((data) => {
+      
+    // })
   }
 
 }

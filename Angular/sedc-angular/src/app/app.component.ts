@@ -11,7 +11,7 @@ export class AppComponent implements OnInit  {
   
   title = 'sedc-angular is not still an application but ';
   userToChange:iUser;
-  sidebarVisibile:boolean = true;
+  sidebarVisibile:boolean = false;
 
   constructor(
     private router:Router
@@ -43,7 +43,7 @@ export class AppComponent implements OnInit  {
 
   hideSidebar()
   {
-    this.sidebarVisibile = false;
+    this.sidebarVisibile = ! this.sidebarVisibile;
   }
 
   doSomethingWithHeaderEvent(value:any)
