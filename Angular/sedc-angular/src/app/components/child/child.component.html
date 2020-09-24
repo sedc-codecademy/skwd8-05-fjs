@@ -1,0 +1,27 @@
+<p>Current counter value is: {{counterValue}}</p>
+
+
+<ul>
+	<li *ngFor="let user of allUsers">
+		<span>{{user.id}}</span>
+		<span>{{user.fullname}}</span>
+	</li>
+</ul>
+
+
+<div>
+	<form #u="ngForm" (ngSubmit)="addUser(u)">
+
+		<div>
+			<legend>ID</legend>
+			<input type="number" ngModel name="id" required />
+		</div>
+
+		<div>
+			<legend>Name</legend>
+			<input type="text" ngModel name="fullname" required />
+		</div>
+
+		<button type="submit">Add User</button>
+	</form>
+</div>

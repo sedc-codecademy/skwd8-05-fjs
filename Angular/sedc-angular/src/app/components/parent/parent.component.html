@@ -1,0 +1,14 @@
+
+<input type="text" name="counter" [ngModel]="counter" readonly />
+<button (click)="increaseCounter()">Increase value</button>
+
+<app-child [counterValue]="counter" [users]="users" (newUserEvent)="addUserFromChild($event)"></app-child>
+<!-- 
+<ul>
+	<li *ngFor="let user of users" (click)="prepareUserForEdit(user)">
+		<span>{{user.id}}</span>
+		<span>{{user.fullname}}</span>
+	</li>
+</ul> -->
+
+<app-child-edit [userData]="editUser" (loadAllUSersEvent)="loadData()" (userDataEdited)="newUserValues($event)"></app-child-edit>

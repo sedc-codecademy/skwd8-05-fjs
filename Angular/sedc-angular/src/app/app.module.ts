@@ -18,6 +18,9 @@ import { SharedModule } from './modules/shared/shared.module';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { ParentComponent } from './components/parent/parent.component';
+import { ChildComponent } from './components/child/child.component';
+import { ChildEditComponent } from './components/child-edit/child-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { MatIconModule, MatSidenavModule, MatToolbarModule } from '@angular/mate
     MainWrapperComponent,
     FilmsComponent,
     ResidentsComponent,
-    SidebarComponent
+    SidebarComponent,
+    ParentComponent,
+    ChildComponent,
+    ChildEditComponent
   ],
   imports: [
     BrowserModule,
